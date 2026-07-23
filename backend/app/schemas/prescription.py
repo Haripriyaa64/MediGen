@@ -1,0 +1,12 @@
+from pydantic import BaseModel
+
+
+class UploadResponse(BaseModel):
+    filename: str
+    content_type: str
+    size: int
+    path: str
+
+
+class OCRResponse(BaseModel):
+    extracted_text: str
